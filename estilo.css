@@ -61,17 +61,12 @@ header .contenedor{
     white-space:nowrap;
 }
 
-.logo-texto h1{
-    font-size:20px;
-    color:#2E7D32;
-    margin:0;
-    font-weight:700;
+.logo-texto h2{
+    font-size:18px;
 }
 
-.logo-texto p{
-    margin-top:5px;
-    color:#666;
-    font-size:18px;
+.logo-texto span{
+    font-size:12px;
 }
 
 .logo img{
@@ -957,134 +952,6 @@ color:#555;
 
 }
 
-/* ===========================================
-   DISEÑO RESPONSIVE
-=========================================== */
-
-@media (max-width: 768px){
-
-/* HEADER */
-
-header .contenedor{
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo{
-    margin-right:0;
-    min-width:auto;
-    justify-content:center;
-}
-
-.logo img{
-    width:70px;
-}
-
-.logo-texto{
-    text-align:center;
-}
-
-.logo-texto h1{
-    font-size:18px;
-}
-
-.logo-texto p{
-    font-size:15px;
-}
-
-/* MENÚ */
-
-nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-}
-
-/* HERO */
-
-.hero{
-    padding:120px 20px 80px;
-    text-align:center;
-}
-
-.hero h1{
-    font-size:40px;
-}
-
-.hero p{
-    font-size:18px;
-}
-
-/* BANNER */
-
-.banner-pagina{
-    padding:120px 20px 70px;
-}
-
-.banner-pagina h1{
-    font-size:34px;
-}
-
-/* TODAS LAS SECCIONES */
-
-.contenedor{
-
-    width:90%;
-
-}
-
-/* DOS COLUMNAS → UNA COLUMNA */
-
-.nutricion-home,
-.inicio-sostenibilidad .contenedor,
-.contacto-grid{
-
-    display:flex;
-    flex-direction:column;
-
-}
-
-/* TARJETAS */
-
-.cards,
-.productos-grid,
-.recetas-grid,
-.beneficios-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-/* IMÁGENES */
-
-img{
-
-    max-width:100%;
-    height:auto;
-
-}
-
-/* BOTONES */
-
-.boton{
-
-    width:100%;
-
-    max-width:300px;
-
-}
-
-/* FOOTER */
-
-footer{
-
-    text-align:center;
-
-}
-
-}
-
 /*====================================
 MENÚ HAMBURGUESA
 ====================================*/
@@ -1101,115 +968,125 @@ MENÚ HAMBURGUESA
 
 }
 
-/*==============================
-RESPONSIVE
-===============================*/
+/* ===========================================
+   RESPONSIVE MOBILE
+=========================================== */
 
-@media(max-width:768px){
+@media screen and (max-width:768px){
 
-header .contenedor{
+    header .contenedor{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:10px 0;
+        flex-wrap:wrap;
+    }
 
-    display:flex;
+    .logo{
+        min-width:auto;
+        display:flex;
+        align-items:center;
+        gap:10px;
+    }
 
-    justify-content:space-between;
+    .logo img{
+        width:60px;
+    }
 
-    align-items:center;
+    .logo h2{
+        font-size:18px;
+        line-height:1.2;
+    }
 
-    flex-wrap:wrap;
+    .logo span{
+        font-size:12px;
+    }
 
-}
+    .menu-toggle{
+        display:block;
+    }
 
-.menu-toggle{
+    nav{
+        display:none;
+        width:100%;
+        margin-top:15px;
+    }
 
-    display:block;
+    nav.active{
+        display:block;
+    }
 
-}
+    nav ul{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+        padding:20px 0;
+    }
 
-nav{
+    .hero{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        padding:170px 20px 70px;
+        gap:30px;
+        min-height:auto;
+    }
 
-    width:100%;
+    .hero-texto h1{
+        font-size:42px;
+    }
 
-    display:none;
+    .hero-texto h3{
+        font-size:22px;
+    }
 
-    margin-top:15px;
+    .hero-texto p{
+        font-size:18px;
+        max-width:100%;
+    }
 
-}
+    .hero-imagen img{
+        width:220px;
+    }
 
-nav.active{
+    .banner-pagina{
+        padding:150px 20px 60px;
+    }
 
-    display:block;
+    .banner-pagina h1{
+        font-size:32px;
+    }
 
-}
+    .cards,
+    .productos-grid,
+    .recetas-grid,
+    .beneficios-grid{
+        grid-template-columns:1fr;
+    }
 
-nav ul{
+    .nutricion-home,
+    .contacto-grid,
+    .inicio-sostenibilidad .contenedor{
+        display:flex;
+        flex-direction:column;
+    }
 
-    display:flex;
+    img{
+        max-width:100%;
+        height:auto;
+    }
 
-    flex-direction:column;
+    .boton{
+        width:auto;
+        min-width:220px;
+    }
 
-    gap:15px;
-
-    text-align:center;
-
-    padding:20px 0;
-
-}
-
-.logo{
-
-    min-width:auto;
-
-    margin-right:0;
-
-}
-
-.hero h1{
-
-    font-size:38px;
-
-}
-
-.banner-pagina h1{
-
-    font-size:34px;
-
-}
-
-.cards,
-.productos-grid,
-.recetas-grid,
-.beneficios-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.contacto-grid,
-.nutricion-home,
-.inicio-sostenibilidad .contenedor{
-
-    display:flex;
-
-    flex-direction:column;
-
-}
-
-.boton{
-
-    width:100%;
-
-    max-width:300px;
-
-}
-
-img{
-
-    max-width:100%;
-
-    height:auto;
-
-}
-
+    footer{
+        text-align:center;
+    }
 }
 
 /*====================================
